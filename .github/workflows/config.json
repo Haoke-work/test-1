@@ -1,0 +1,39 @@
+{
+  "_comment": "网页数据自动提取配置文件 - 请根据实际网站修改",
+  
+  "target_url": "https://cafnevtabl.changanford.cn/#/site/Marketing/views/C/C?:iid=1",
+  "username": "yliu66",
+  "password": "Yliu66@ford.com",
+  
+  "headless": true,
+  "output_dir": "./downloads",
+  "export_format": "excel",
+  
+  "_comment_selectors": "网页元素选择器 - 需要根据实际网站调整",
+  "selectors": {
+    "username_field": "username",
+    "password_field": "password",
+    "login_button": "login-btn"
+  },
+  
+  "_comment_filters": "筛选条件 - 可选，根据需要配置",
+  "filters": [
+    {
+      "type": "text",
+      "name": "开始日期",
+      "selector": "input[name='date_from']",
+      "value": "2026-03-01"
+    },
+    {
+      "type": "text",
+      "name": "结束日期",
+      "selector": "input[name='date_to']",
+      "value": "2026-03-11"
+    },
+    {
+      "type": "click",
+      "name": "查询按钮",
+      "selector": "button.search-btn"
+    }
+  ]
+}
